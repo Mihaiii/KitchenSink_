@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run start-time="2017-02-24 10:36:23Z">
+  <command-line><![CDATA[packages\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe  test\KitchenSink.Tests\bin\Debug\KitchenSink.Tests.dll --noheader --params Browsers=Chrome,Firefox]]></command-line>
+</test-run>

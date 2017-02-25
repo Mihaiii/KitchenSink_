@@ -1,0 +1,11 @@
+D:\KitchenSink-master\KitchenSink-master\test\KitchenSink.Tests\bin\Debug\KitchenSink.Tests.dll
+D:\KitchenSink-master\KitchenSink-master\test\KitchenSink.Tests\bin\Debug\KitchenSink.Tests.pdb
+D:\KitchenSink-master\KitchenSink-master\test\KitchenSink.Tests\bin\Debug\nunit.framework.dll
+D:\KitchenSink-master\KitchenSink-master\test\KitchenSink.Tests\bin\Debug\WebDriver.dll
+D:\KitchenSink-master\KitchenSink-master\test\KitchenSink.Tests\bin\Debug\WebDriver.Support.dll
+D:\KitchenSink-master\KitchenSink-master\test\KitchenSink.Tests\bin\Debug\nunit.framework.xml
+D:\KitchenSink-master\KitchenSink-master\test\KitchenSink.Tests\bin\Debug\WebDriver.xml
+D:\KitchenSink-master\KitchenSink-master\test\KitchenSink.Tests\bin\Debug\WebDriver.Support.xml
+D:\KitchenSink-master\KitchenSink-master\test\KitchenSink.Tests\obj\Debug\KitchenSink.Tests.csprojResolveAssemblyReference.cache
+D:\KitchenSink-master\KitchenSink-master\test\KitchenSink.Tests\obj\Debug\KitchenSink.Tests.dll
+D:\KitchenSink-master\KitchenSink-master\test\KitchenSink.Tests\obj\Debug\KitchenSink.Tests.pdb

@@ -1,0 +1,65 @@
+﻿<link rel="import" href="/sys/juicy-draggable/juicy-draggable.html" />
+
+<template>
+    <style>
+        .fa-thumbs-o-up:hover, .fa-thumbs-o-down:hover {
+            color: #0094ff;
+        }
+    </style>
+    <template is="dom-bind">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <template is="dom-repeat" items="{{model.Persons}}">
+                    <tr>
+                        <td class="drop">
+                            <juicy-draggable position="static" dropselector="td.drop" on-juicy-draggable-stop="moveItem" item="{{item}}">
+                                <div class="drag">{{item.Name}}</div>
+                            </juicy-draggable>
+                        </td>
+                        <td style="width:40px">
+                            <template is="dom-if" if="{{!item.isFirst$}}">
+                                <span class="fa fa-thumbs-o-up" value="{{item.moveUp$::click}}" onclick="++this.value"></span>
+                            </template>
+                        </td>
+                        <td style="width:40px">
+                            <template is="dom-if" if="{{!item.isLast$}}">
+                                <span class="fa fa-thumbs-o-down" value="{{item.moveDown$::click}}" onclick="++this.value" span>
+                            </template>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </template>
+    <script>
+        console.log('here');
+        var script = document._currentScript || document.currentScript;
+        var template = script.previousElementSibling;
+        //template.eraseTextName = function (event) {
+        //    event.srcElement.getElementsByClassName('drag')[0].innerHTML = "";
+        //}
+        template.moveItem = function (event) {
+            
+            var fromOrderNr = event.currentTarget.item.orderNr$;
+            var target = event.detail.dropElement;
+            if (target) {
+                var toOrderNr = target.getElementsByTagName('juicy-draggable')[0].item.orderNr$;
+                if (fromOrderNr != toOrderNr) {
+                    template.set("model.moveTo$", fromOrderNr + ' ' + toOrderNr);
+                }
+                if (target.getElementsByClassName('drag').length) {
+                    event.detail.dragElement.innerHTML = "";
+                }
+            } else {
+                event.detail.dragElement.innerHTML = "";
+            }
+        };
+    </script>
+</template>
