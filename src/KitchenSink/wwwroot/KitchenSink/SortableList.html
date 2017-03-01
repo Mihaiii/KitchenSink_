@@ -45,18 +45,42 @@
         //template.eraseTextName = function (event) {
         //    event.srcElement.getElementsByClassName('drag')[0].innerHTML = "";
         //}
+        var oldFromOrderNr = null;
+        var oldToOrderNr = null;
+        var repetitiveMovement = 0;
+
+        template.observers = ["onDataChange(model.moveTo$.*)"]
+
+        template.onDataChange = function (value) {
+            if (value) {
+                [].forEach.call(document.getElementsByClassName('drag-helper'), function(elem) {
+                    elem.style['z-index'] = -1;
+                    elem.style['zIndex'] = -1;
+                });
+            }
+        }
+
         template.moveItem = function (event) {
-            
+
             var fromOrderNr = event.currentTarget.item.orderNr$;
             var target = event.detail.dropElement;
             if (target) {
                 var toOrderNr = target.getElementsByTagName('juicy-draggable')[0].item.orderNr$;
                 if (fromOrderNr != toOrderNr) {
-                    template.set("model.moveTo$", fromOrderNr + ' ' + toOrderNr);
+                    if (fromOrderNr == oldFromOrderNr && toOrderNr == oldToOrderNr) {
+                        repetitiveMovement++;
+                    } else {
+                        repetitiveMovement = 0;
+                    }
+                    if (repetitiveMovement % 2 == 0) {
+                        template.set("model.moveTo$", fromOrderNr + ' ' + toOrderNr);
+                    } else {
+                        template.set("model.moveTo$", fromOrderNr + ' ' + toOrderNr + ' ');
+                    }
+                    oldFromOrderNr = fromOrderNr;
+                    oldToOrderNr = toOrderNr;
                 }
-                if (target.getElementsByClassName('drag').length) {
-                    event.detail.dragElement.innerHTML = "";
-                }
+                event.detail.dragElement.innerHTML = "";
             } else {
                 event.detail.dragElement.innerHTML = "";
             }

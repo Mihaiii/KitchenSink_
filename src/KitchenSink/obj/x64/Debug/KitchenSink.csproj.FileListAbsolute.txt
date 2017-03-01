@@ -3,3 +3,8 @@ D:\KitchenSink-master\KitchenSink-master\bin\Debug\KitchenSink.pdb
 D:\KitchenSink-master\KitchenSink-master\src\KitchenSink\obj\x64\Debug\KitchenSink.csprojResolveAssemblyReference.cache
 D:\KitchenSink-master\KitchenSink-master\src\KitchenSink\obj\x64\Debug\KitchenSink.exe
 D:\KitchenSink-master\KitchenSink-master\src\KitchenSink\obj\x64\Debug\KitchenSink.pdb
+D:\New folder\KitchenSink\KitchenSink-master\KitchenSink\bin\Debug\KitchenSink.exe
+D:\New folder\KitchenSink\KitchenSink-master\KitchenSink\bin\Debug\KitchenSink.pdb
+D:\New folder\KitchenSink\KitchenSink-master\KitchenSink\src\KitchenSink\obj\x64\Debug\KitchenSink.csprojResolveAssemblyReference.cache
+D:\New folder\KitchenSink\KitchenSink-master\KitchenSink\src\KitchenSink\obj\x64\Debug\KitchenSink.exe
+D:\New folder\KitchenSink\KitchenSink-master\KitchenSink\src\KitchenSink\obj\x64\Debug\KitchenSink.pdb
